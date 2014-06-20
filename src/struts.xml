@@ -297,6 +297,13 @@
 				/user-pages/user-new-events.jsp
 			</result>
 		</action>
+		
+		<!-- 查看活动信息 -->
+		<action name="get-event-info" class="eventAction" method="getSingleEvent">
+			<result name="toEventInfo">
+				/user-pages/event-info.jsp
+			</result>
+		</action>
 
 
 		<!-- 会员信息 -->

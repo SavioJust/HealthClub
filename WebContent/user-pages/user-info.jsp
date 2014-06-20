@@ -47,7 +47,6 @@
 	border-color: #5CB85C;
 	margin-left: 15px;
 }
-
 </style>
 </head>
 
@@ -90,17 +89,12 @@
 
 						<!-- 面板本体 -->
 						<div class="info-tab">
-							<ul id="myTab" class="nav nav-tabs info-tab-header">
-								<li class="active"><a href="#normal-card-info"
-									data-toggle="tab">会员信息</a></li>
-								<li><a href="#event-history" data-toggle="tab">历史活动</a></li>
-								<li><a href="#payment-history" data-toggle="tab">缴费信息</a></li>
-							</ul>
+
 
 							<div id="myTabContent" class="tab-content">
 								<!-- 会员子面板 -->
-								<div class="tab-pane fade in active" id="normal-card-info">
-
+								<div id="normal-card-info">
+									<p class="nav nav-tabs info-tab-header"> 	&diams;会员信息</p>
 									<s:push value="#session.user">
 										<s:if test="stringState=='未激活'">
 											<s:include value="activate-membership.jsp">
@@ -111,15 +105,15 @@
 										</s:if>
 
 										<p>
-											<span class="glyphicon glyphicon-tasks"></span>
+											&para;
 											<s:property value="stringType" />
 											会员编号：
 											<s:property value="code" />
-											
+
 
 										</p>
 										<p>
-											<span class="glyphicon glyphicon-flag"></span>
+											&para;
 											<s:property value="stringType" />
 											会员名：
 											<s:property value="name" />
@@ -129,7 +123,7 @@
 
 										</p>
 										<p>
-											<span class="glyphicon glyphicon-inbox"></span> 账户状态：
+											&para; 账户状态：
 											<s:property value="stringState" />
 
 
@@ -144,7 +138,7 @@
 
 										<!-- 顾客详情列表 -->
 										<div class="table-responsive">
-											<span class="glyphicon glyphicon-list-alt"></span> 顾客详细信息：
+											&para; 顾客详细信息：
 											<table class="table">
 												<thead>
 													<tr>
@@ -169,33 +163,34 @@
 												</tbody>
 											</table>
 										</div>
-										
+
 										<s:if test="stringState=='正常'">
-												<form action="user/cancel-membership" method="post">
-													<input type="hidden" value='<s:property value="id"/>'/>
-													<button class="btn btn-default" type="submit">
-														会员注销
-													</button>
-												</form>
-											</s:if>
-											
+											<form action="user/cancel-membership" method="post">
+												<input type="hidden" value='<s:property value="id"/>' />
+												<button class="btn btn-default" type="submit">会员注销
+												</button>
+											</form>
+										</s:if>
+
 
 									</s:push>
 								</div>
 
 								<!-- 活动记录子面板 -->
-								<div class="tab-pane fade" id="event-history">
 
+								<div id="event-history">
+									<p class="nav nav-tabs info-tab-header">历史活动</p>
 									<!-- 迭代显示所有内容 -->
 									<s:iterator var="item" value="#request['closedEvents']"
 										status="status">
-											<s:include value="event-item-history.jsp"></s:include>
+										<s:include value="event-item-history.jsp"></s:include>
 									</s:iterator>
 
 								</div>
 
 								<!-- 缴费记录子面板 -->
-								<div class="tab-pane fade" id="payment-history">
+								<div id="payment-history">
+									<p class="nav nav-tabs info-tab-header">缴费信息</p>
 									<table class="table table-responsive">
 										<thead>
 											<tr>
@@ -263,7 +258,8 @@
 												<label class="col-md-3 control-label">会员名</label>
 												<div class="col-md-6">
 													<input type="text" class="form-control"
-														name="modifiedUser.newUserName" value='<s:property value="name"/>'>
+														name="modifiedUser.newUserName"
+														value='<s:property value="name"/>'>
 												</div>
 											</div>
 
@@ -323,9 +319,9 @@
 	<script
 		src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"
 		type="text/javascript"></script>-->
-		
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 
 
 	<script type="text/javascript">

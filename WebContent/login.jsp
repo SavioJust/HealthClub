@@ -218,12 +218,9 @@
 	</div>
 
 
-	<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"
-		type="text/javascript"></script>
-	<script
-		src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"
-		type="text/javascript"></script>
 
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
 
 	<script type="text/javascript">

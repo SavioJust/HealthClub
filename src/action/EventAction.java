@@ -18,6 +18,9 @@ public class EventAction extends ActionSupport implements RequestAware,SessionAw
 	private Map<String, Object> requestMap;
 	private Map<String, Object> sessionMap;
 	
+	private Event event;
+	private int eventID;
+	
 	
 	/**
 	 * 获取用户得到的所有活动列表
@@ -89,6 +92,19 @@ public class EventAction extends ActionSupport implements RequestAware,SessionAw
 	}
 	
 	
+	/**
+	 * 得到单个活动的信息
+	 * @return
+	 */
+	public String getSingleEvent(){
+		event = eventService.getEvent(eventID);
+		
+		requestMap.put("singleEvent", event);
+		
+		return "toEventInfo";
+		
+	}
+	
 	
 
 	@Override
@@ -107,6 +123,26 @@ public class EventAction extends ActionSupport implements RequestAware,SessionAw
 
 	public void setEventService(IEventService eventService) {
 		this.eventService = eventService;
+	}
+
+
+	public Event getEvent() {
+		return event;
+	}
+
+
+	public void setEvent(Event event) {
+		this.event = event;
+	}
+
+
+	public int getEventID() {
+		return eventID;
+	}
+
+
+	public void setEventID(int eventID) {
+		this.eventID = eventID;
 	}
 
 }

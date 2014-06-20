@@ -45,7 +45,7 @@
             <!-- 正文 -->
             <div class="row">
                 <div class="page-header">
-                  <p class="page-title"><span class="glyphicon glyphicon-edit" /> 当前可以预约的活动</p>
+                  <p class="page-title">&diams;当前可以预约的活动</p>
                 </div>
               
 

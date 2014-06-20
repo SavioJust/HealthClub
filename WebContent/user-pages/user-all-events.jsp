@@ -46,7 +46,7 @@
             <div class="row">
                 <div class="page-header">
                   
-                  <p class="page-title"><span class="glyphicon glyphicon-list" /> 当前所有活动</p>
+                  <p class="page-title">&diams;当前所有活动</p>
                 </div>
                 
                 <!-- 迭代显示所有内容 -->
