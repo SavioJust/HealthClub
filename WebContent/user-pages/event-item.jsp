@@ -27,9 +27,6 @@
 		已预约人数：
 		<s:property value="currentPeople" />
 	</p>
-	<p>
-		最近时间：
-		<s:property value="latestTime" />
-	</p>
+
 
 </div>

@@ -100,7 +100,7 @@
 							<input type="hidden" name="eventId"
 								value='<s:property value="#request.event.id"/>'>
 
-							<s:if test="reserved">
+							<s:if test="#request.event.reserved">
 								<button type="submit" class="btn btn-primary">取消预约</button>
 								<input type="hidden" name="toReserve" value="false">
 							</s:if>

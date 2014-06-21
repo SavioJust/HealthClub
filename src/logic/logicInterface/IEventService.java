@@ -28,6 +28,8 @@ public interface IEventService {
 	
 	public Event getEvent(Integer eventId);
 	
+	public Event getEvent(int eventID, String account);
+	
 	
 	/**
 	 * 辅助接口
@@ -54,5 +56,4 @@ public interface IEventService {
 	 */
 	public void settleEventState();
 
-	
 }

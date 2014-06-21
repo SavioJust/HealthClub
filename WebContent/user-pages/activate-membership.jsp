@@ -5,15 +5,7 @@
 <!-- 未激活用户会出现的激活面板 -->
 <div class="panel-group" id="active-panel">
 	<div class="panel panel-default">
-		<div class="panel-heading">
-			<h4 class="panel-title">
-
-				<a data-toggle="collapse" data-toggle="collapse"
-					data-parent="#accordion" href="#collapseOne"> 激活${param.type}会员
-				</a>
-			</h4>
-		</div>
-		<div id="collapseOne" class="panel-collapse collapse">
+		<div>
 			<div class="panel-body">
 
 				<form class="form-horizontal" action="user/activate-membership" method="post">

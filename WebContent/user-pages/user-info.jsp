@@ -94,7 +94,7 @@
 							<div id="myTabContent" class="tab-content">
 								<!-- 会员子面板 -->
 								<div id="normal-card-info">
-									<p class="nav nav-tabs info-tab-header"> 	&diams;会员信息</p>
+									<p class="nav nav-tabs info-tab-header">&diams;会员信息</p>
 									<s:push value="#session.user">
 										<s:if test="stringState=='未激活'">
 											<s:include value="activate-membership.jsp">
@@ -105,7 +105,7 @@
 										</s:if>
 
 										<p>
-											&para;
+											&bull;
 											<s:property value="stringType" />
 											会员编号：
 											<s:property value="code" />
@@ -113,17 +113,16 @@
 
 										</p>
 										<p>
-											&para;
+											&bull;
 											<s:property value="stringType" />
 											会员名：
 											<s:property value="name" />
 
-											<a class="btn btn-default" data-toggle="modal"
-												data-target="#modifyModal">资料修改</a>
+											<a class="btn btn-default" href="user/user-info-edit">资料修改</a>
 
 										</p>
 										<p>
-											&para; 账户状态：
+											&bull; 账户状态：
 											<s:property value="stringState" />
 
 
@@ -138,7 +137,7 @@
 
 										<!-- 顾客详情列表 -->
 										<div class="table-responsive">
-											&para; 顾客详细信息：
+											&bull; 顾客详细信息：
 											<table class="table">
 												<thead>
 													<tr>
@@ -231,82 +230,6 @@
 						<s:param name="modalId">recoverModal</s:param>
 						<s:param name="type">个人</s:param>
 					</s:include>
-
-
-
-					<!-- 资料修改模态框 -->
-					<div class="modal fade" id='modifyModal'
-						aria-labelledby="eventModalLabel" aria-hidden="true">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal"
-										aria-hidden="true">&times;</button>
-									<h4 class="modal-title" id="eventModalLabel">资料修改</h4>
-								</div>
-
-
-								<!-- 压入User -->
-								<s:push value="#session.user">
-
-									<form class="form-horizontal" method="post"
-										action="user/modify-info">
-
-										<div class="modal-body">
-
-											<div class="form-group">
-												<label class="col-md-3 control-label">会员名</label>
-												<div class="col-md-6">
-													<input type="text" class="form-control"
-														name="modifiedUser.newUserName"
-														value='<s:property value="name"/>'>
-												</div>
-											</div>
-
-											<div class="form-group">
-												<label class="col-md-3 control-label">原密码</label>
-												<div class="col-md-6">
-													<input type="text" class="form-control"
-														name="modifiedUser.oldPassword">
-												</div>
-											</div>
-
-											<div class="form-group">
-												<label class="col-md-3 control-label">新密码</label>
-												<div class="col-md-6">
-													<input type="text" class="form-control"
-														name="modifiedUser.newPassword">
-												</div>
-											</div>
-
-											<div class="form-group">
-												<label class="col-md-3 control-label">新密码确认</label>
-												<div class="col-md-6">
-													<input type="text" class="form-control"
-														name="modifiedUser.confirmPassword">
-												</div>
-											</div>
-
-										</div>
-
-										<div class="modal-footer">
-											<button type="button" class="btn btn-default"
-												data-dismiss="modal">关闭</button>
-											<button type="submit" class="btn btn-primary">确认修改</button>
-										</div>
-									</form>
-
-								</s:push>
-
-
-							</div>
-
-						</div>
-						<!-- /.modal-content -->
-					</div>
-					<!-- /.modal-dialog -->
-					<div></div>
-					<!-- /.modal -->
 
 				</div>
 			</div>

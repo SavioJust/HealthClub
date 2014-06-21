@@ -26,16 +26,6 @@
 						<div class="col-md-3"></div>
 					</div>
 
-					<!--<div class="form-group">
-						 <div class="col-md-offset-1 col-md-2">
-							<span>缴费月数</span>
-						</div> 
-
-						<div class="col-md-3">
-							<input type="number" placeholder="输入月数" name="months" />
-						</div>
-					</div>-->
-
 
 					<p>资费标准：会员资格费用为75美元/人，或100美元/家庭；
 						每月收费，40美元/人，或55美元/夫妻（每个10~18岁孩子另加10美元）</p>

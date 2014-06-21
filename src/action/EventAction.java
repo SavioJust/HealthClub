@@ -97,7 +97,9 @@ public class EventAction extends ActionSupport implements RequestAware,SessionAw
 	 * @return
 	 */
 	public String getSingleEvent(){
-		event = eventService.getEvent(eventID);
+		User user = (User)sessionMap.get("user");
+		
+		event = eventService.getEvent(eventID, user.getAccount());
 		
 		requestMap.put("singleEvent", event);
 		

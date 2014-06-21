@@ -312,6 +312,13 @@
 				/user-pages/user-info.jsp
 			</result>
 		</action>
+		
+		<!-- 信息修改页面跳转 -->
+		<action name="user-info-edit">
+			<result>
+				/user-pages/user-info-edit.jsp
+			</result>
+		</action>
 
 		<!-- 信息修改 -->
 		<action name="modify-info" class="userInfoAction" method="modifyInfo">

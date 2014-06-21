@@ -123,4 +123,17 @@ public class EventServiceImpl implements IEventService {
 	public List<Event> getAllClosedEvents() {
 		return eventDao.getAllClosedEvents();
 	}
+
+	@Override
+	public Event getEvent(int eventID, String account) {
+		List<Event> reservedEvents = getReservedActiveEvents(account);
+		
+		for( Event e: reservedEvents ){
+			if( e.getId() == eventID ){
+				return e;
+			}
+		}
+		
+		return getEvent(new Integer(eventID));
+	}
 }
